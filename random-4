@@ -1,0 +1,14 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		int l=5;
+		int h=10;
+		int range=(h-l)+1;//10 include
+		
+		for(int i=0;i<5;i++){
+		    int random=(int)(Math.random()*range)+l;
+		    System.out.print(random+" ");
+		}
+	}
+}
