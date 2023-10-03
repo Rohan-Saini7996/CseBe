@@ -1,0 +1,20 @@
+
+public class Main
+{
+	public static void main(String[] args) {
+		String s="This.is.interview.question";
+		
+		String[] word=s.split("[.]");
+		String res="";
+		for(int i=word.length-1;i>=0;i--){
+		    if(i==0){
+		        res+=word[i];
+		    }else{
+		        res+=word[i]+" ";
+		    }
+		    
+		}
+		System.out.print(res);
+		
+	}
+}
