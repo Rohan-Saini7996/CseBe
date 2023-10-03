@@ -1,0 +1,75 @@
+
+public class Main
+{
+    public static String addZeros(String s,int l){
+        for(int i=0;i<l;i++){
+            s="0"+s;
+        }
+        return s;
+    }
+    
+    
+	public static void main(String[] args) {
+		int ab=8;
+		StringBuilder str=new StringBuilder();
+		while(ab!=0){
+		    int b=ab%2;
+		    str=str.append(Integer.toString(b));
+		    ab=ab>>1;
+		}
+		String str1=str.reverse().toString();
+		System.out.println(str1);
+		
+		String s="1011010";
+// 		String str1="1000";
+
+		
+		if(s.length()>str1.length()){
+		    str1=addZeros(str1,s.length()-str1.length());
+		}
+		
+		
+		System.out.println(str1+" "+s);
+		String res = "";
+         
+        for (int i = 0; i < s.length(); i++)
+        {
+            if (s.charAt(i) == str1.charAt(i))
+                res += "0";
+            else
+                res += "1";
+        }
+        System.out.print(res);
+		
+		
+		
+		
+// 		int xor=a^b;
+// 		System.out.println(xor);
+		
+// 		int i=0,j=0,count=0;
+// 		char a='\0',b='\0';
+		//count number of ones
+// 		while(i<s.length() || j<str1.length()){
+// 		    if(i==s.length()){
+// 		        a='0';
+// 		    }else{
+// 		        a=s.charAt(i);
+// 		    }
+// 		    if(j==str1.length()){
+// 		        b='0';
+// 		    }else{
+// 		        b=str1.charAt(j);
+// 		    }
+		    
+// 		    if(a==b){
+// 		        count++;
+// 		    }
+// 		    i++;
+// 		    j++;
+// 		}
+// 		System.out.print(count);
+		
+		
+	}
+}
