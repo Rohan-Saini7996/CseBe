@@ -1,0 +1,63 @@
+import java.util.*;
+public class Main
+{
+    static Stack<Integer> s=new Stack<>();
+    public static void insert(int data){
+        if(s.isEmpty()){
+            s.push(data);
+        }else{
+            int a=s.peek();
+            if(a<data){
+                s.pop();
+                insert(data);
+                s.push(a);
+            }else{
+                s.push(data);
+            }
+        }
+        //in ascending order
+        
+        
+        
+        /*sort in descending order
+        if(s.isEmpty()){
+            s.push(data);
+        }else{
+            int a=s.peek();
+            if(a>data){
+                s.pop();
+                insert(data);
+                s.push(a);
+            }else{
+                s.push(data);
+            }
+        }*/
+    }
+    
+    
+    
+    public static void sort(){
+        if(s.size()>0){
+            int a=s.peek();
+            s.pop();
+            sort();
+            insert(a);
+        }
+    }
+    
+    
+    
+	public static void main(String[] args) {
+	
+		s.push(3);
+		s.push(5);
+		s.push(4);
+		s.push(1);
+		s.push(2);
+		
+		sort();
+		while(!s.isEmpty()){
+		    System.out.print(s.pop()+" ");
+		}
+	}
+}
