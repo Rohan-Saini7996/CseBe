@@ -1,0 +1,17 @@
+
+public class Main
+{
+	public static void main(String[] args) {
+			String a="101000";
+			
+			int sum=0;
+			for(int i=0;i<a.length();i++){
+			    if(a.charAt(i)=='1'){
+			        int len=a.length()-i-1;
+			        sum+=Math.pow(2,len);
+			    }
+			}
+			System.out.print(sum);
+			
+	}
+}
