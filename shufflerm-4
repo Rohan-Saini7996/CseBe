@@ -1,0 +1,42 @@
+import java.util.*;
+public class Main
+{
+    static List<String> list=new ArrayList<>();
+    
+    // public static void sol(String s,String temp){
+    //     if(s.length()==0){
+    //         list.add(temp);
+    //         return;
+    //     }
+        
+        
+    //     sol(s.substring(1),temp+s.charAt(0));
+        
+    //     sol(s.substring(1),temp);
+    // }
+    
+    //either use above or below both are same
+    public static void sol(String s,String temp,int i){
+        if(s.length()==i){
+            list.add(temp);
+            return;
+        }
+        
+        
+        sol(s,temp+s.charAt(i),i+1);
+        
+        sol(s,temp,i+1);
+    }
+    
+    
+	public static void main(String[] args) {
+	    String str="abc";
+	    
+	    sol(str,"",0);
+	    
+	    for(int i=0;i<list.size();i++){
+	        System.out.print(list.get(i)+" ");
+	    }
+	    System.out.print(list.size());
+	}
+}
